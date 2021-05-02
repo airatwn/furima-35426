@@ -50,7 +50,7 @@ Things you may want to cover:
 | price               | integer    | null: false                    |
 | condition_id        | integer    | null: false                    |
 | shipping charges_id | integer    | null: false                    |
-| shipping_area_id    | integer    | null: false                    |
+| prefectures_id      | integer    | null: false                    |
 | days_to_ship_id     | integer    | null: false                    |
 | item_text           | string     | null: false                    |
 | user                | references | null: false, foreign_key: true |
@@ -65,7 +65,7 @@ Things you may want to cover:
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | portal_code     | string     | null: false                    |
-| prefectures     | string     | null: false                    |
+| prefectures_id  | string     | null: false                    |
 | address1        | string     | null: false                    |
 | address2        | integer    | null: false                    |
 | building_name   | string     |                                |
