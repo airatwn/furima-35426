@@ -49,7 +49,6 @@ Things you may want to cover:
 | item_name       | string     | null: false                    |
 | category        | string     | null: false                    |
 | price           | integer    | null: false                    |
-| seller          | string     | null: false                    |
 | condition       | string     | null: false                    |
 | item_text       | string     | null: false                    |
 | user            | references | null: false, foreign_key: true |
