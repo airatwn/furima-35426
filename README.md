@@ -75,6 +75,7 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :item
+- has_one :purchase_record
 
 ## commentsTabel名
 
@@ -98,3 +99,4 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :item
+- belongs_to :shipping_address

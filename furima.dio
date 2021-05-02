@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="D1RwCfkAZ05HCNGe0pmw" name="ページ1">
-        <mxGraphModel dx="684" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="391" dy="389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -194,6 +194,9 @@
                             <mxPoint x="370" y="298"/>
                         </Array>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="110" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;strokeWidth=1;fillColor=#d80073;strokeColor=#A50040;rounded=0;" edge="1" parent="1" source="88" target="56">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="88" value="purchase_recordsTable" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="1">
                     <mxGeometry x="40" y="760" width="180" height="330" as="geometry"/>
