@@ -91,7 +91,7 @@ Things you may want to cover:
 - belongs_to :item
 
 
-## puechase_recodsTabel名
+## puechase_recordsTabel名
 
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
