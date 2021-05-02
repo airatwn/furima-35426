@@ -37,9 +37,9 @@ Things you may want to cover:
 | birthday           | date       | null: false                    |
 
 ### Association
-- has_many :item
-- has_many :comment
-- has_many :purchase_record
+- has_many :items
+- has_many :comments
+- has_many :purchase_records
 
 ## itemsTabel名
 
