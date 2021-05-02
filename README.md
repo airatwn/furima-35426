@@ -28,7 +28,7 @@ Things you may want to cover:
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | nickname         | string     | null: false                    |
-| email            | string     | null: false                    |
+| email            | string     | null: false,unique:true        |
 | password         | string     | null: false                    |
 | first_name       | string     | null: false                    |
 | first_name_kana  | string     | null: false                    |
