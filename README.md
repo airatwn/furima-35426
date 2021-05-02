@@ -52,7 +52,7 @@ Things you may want to cover:
 | shipping charges_id | integer    | null: false                    |
 | prefectures_id      | integer    | null: false                    |
 | days_to_ship_id     | integer    | null: false                    |
-| item_text           | string     | null: false                    |
+| item_text           | text       | null: false                    |
 | user                | references | null: false, foreign_key: true |
 
 ### Association
