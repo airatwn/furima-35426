@@ -60,7 +60,6 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comments
 - has_one :purchase_record
-- has_one :shipping_address
 
 ## shipping addressTabel名
 
