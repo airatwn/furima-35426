@@ -47,12 +47,12 @@ Things you may want to cover:
 | Column              | Type       | Options                        |
 | --------------------| ---------- | ------------------------------ |
 | item_name           | string     | null: false                    |
-| category            | string     | null: false                    |
+| category_id         | integer    | null: false                    |
 | price               | integer    | null: false                    |
-| condition_id        | string     | null: false                    |
-| shipping charges_id | string     | null: false                    |
-| shipping_area_id    | string     | null: false                    |
-| days to ship_id     | string     | null: false                    |
+| condition_id        | integer    | null: false                    |
+| shipping charges_id | integer    | null: false                    |
+| shipping_area_id    | integer    | null: false                    |
+| days to ship_id     | integer    | null: false                    |
 | item_text           | string     | null: false                    |
 | user                | references | null: false, foreign_key: true |
 
