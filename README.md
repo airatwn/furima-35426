@@ -39,7 +39,6 @@ Things you may want to cover:
 ### Association
 - has_many :item
 - has_many :comment
-- has_one :shipping_address
 - has_many :purchase_record
 
 ## itemsTabel名
