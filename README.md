@@ -70,7 +70,7 @@ Things you may want to cover:
 | prefectures     | string     | null: false                    |
 | address1        | string     | null: false                    |
 | address2        | integer    | null: false                    |
-| building_name   | string     | null: false                    |
+| building_name   | string     |                                |
 | phone_number    | string     | null: false                    |
 | user            | references | null: false, foreign_key: true |
 
