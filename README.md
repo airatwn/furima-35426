@@ -37,10 +37,10 @@ Things you may want to cover:
 | birthday           | date       | null: false                    |
 
 ### Association
-- has_many :items
-- has_many :comments
+- has_many :item
+- has_many :comment
 - has_one :shipping_address
-- has_many :purchase_records
+- has_many :purchase_record
 
 ## itemsTabel名
 
@@ -57,9 +57,9 @@ Things you may want to cover:
 | user                | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :users
+- belongs_to :user
 - has_many :comments
-- has_one :purchase_records
+- has_one :purchase_record
 - has_one :shipping_address
 
 ## shipping addressTabel名
@@ -75,8 +75,8 @@ Things you may want to cover:
 | user            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :users
-- belongs_to ;items
+- belongs_to :user
+- belongs_to :item
 
 ## commentsTabel名
 
@@ -87,8 +87,8 @@ Things you may want to cover:
 | user            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :users
-- belongs_to :items
+- belongs_to :user
+- belongs_to :item
 
 
 ## puechase_recodsTabel名
@@ -99,5 +99,5 @@ Things you may want to cover:
 | user            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :users
-- belongs_to :items
+- belongs_to :user
+- belongs_to :item
