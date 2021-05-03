@@ -65,12 +65,12 @@ Things you may want to cover:
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | portal_code      | string     | null: false                    |
-| prefecture_id   | integer    | null: false                    |
+| prefecture_id    | integer    | null: false                    |
 | address1         | string     | null: false                    |
 | address2         | string     | null: false                    |
 | building_name    | string     |                                |
 | phone_number     | string     | null: false                    |
-| purchase_record | references | null: false, foreign_key: true |
+| order            | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :purchase_record
@@ -88,7 +88,7 @@ Things you may want to cover:
 - belongs_to :item
 
 
-## purchase_recordsTabel名
+## ordersTabel名
 
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
