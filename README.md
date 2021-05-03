@@ -49,7 +49,7 @@ Things you may want to cover:
 | category_id         | integer    | null: false                    |
 | price               | integer    | null: false                    |
 | condition_id        | integer    | null: false                    |
-| shipping charges_id | integer    | null: false                    |
+| shipping_charges_id | integer    | null: false                    |
 | prefectures_id      | integer    | null: false                    |
 | days_to_ship_id     | integer    | null: false                    |
 | item_text           | text       | null: false                    |
@@ -60,7 +60,7 @@ Things you may want to cover:
 - has_many :comments
 - has_one :purchase_record
 
-## shipping addressTabel名
+## shipping addressesTabel名
 
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
