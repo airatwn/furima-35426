@@ -73,8 +73,6 @@ Things you may want to cover:
 | user            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
-- belongs_to :item
 - has_one :purchase_record
 
 ## commentsTabel名
