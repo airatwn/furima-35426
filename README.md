@@ -66,7 +66,7 @@ Things you may want to cover:
 | --------------- | ---------- | ------------------------------ |
 | portal_code     | string     | null: false                    |
 | prefectures_id  | integer    | null: false                    |
-| address1        | string     | null: false                    |
+| address1        | integer    | null: false                    |
 | address2        | integer    | null: false                    |
 | building_name   | string     |                                |
 | phone_number    | string     | null: false                    |
