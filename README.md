@@ -60,17 +60,17 @@ Things you may want to cover:
 - has_many :comments
 - has_one :purchase_record
 
-## shipping addressesTabel名
+## shipping_addressesTabel名
 
-| Column          | Type       | Options                        |
-| --------------- | ---------- | ------------------------------ |
-| portal_code     | string     | null: false                    |
-| prefectures_id  | integer    | null: false                    |
-| address1        | string     | null: false                    |
-| address2        | string     | null: false                    |
-| building_name   | string     |                                |
-| phone_number    | string     | null: false                    |
-| user            | references | null: false, foreign_key: true |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| portal_code      | string     | null: false                    |
+| prefectures_id   | integer    | null: false                    |
+| address1         | string     | null: false                    |
+| address2         | string     | null: false                    |
+| building_name    | string     |                                |
+| phone_number     | string     | null: false                    |
+| purchase_records | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :purchase_record
