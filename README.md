@@ -65,7 +65,7 @@ Things you may want to cover:
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | portal_code     | string     | null: false                    |
-| prefectures_id  | string     | null: false                    |
+| prefectures_id  | integer    | null: false                    |
 | address1        | string     | null: false                    |
 | address2        | integer    | null: false                    |
 | building_name   | string     |                                |
