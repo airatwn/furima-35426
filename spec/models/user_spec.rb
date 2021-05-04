@@ -11,47 +11,7 @@ RSpec.describe User, type: :model do
      it 'nicknameとemail、passwordとpassword_confirmationとfirst_nameとfirst_name_kanaとfamily_nameとfamily_name_kanaとbirthdayが存在すれば登録できる' do
       expect(@user).to be_valid
      end
-    #  it 'nicknameが必須であること' do
-    #   @user.nickname = "aaaaaa"
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'emailが必須であること' do
-    #   @user.email = "aaa@aaa"
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'emailが一意性であること' do
-    #   @user.email = "aaa@aaa"
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'emailは、@を含む必要があること' do
-    #   @user.email = "aaa@aaa"
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'パスワードが必須であること' do
-    #   @user.password = '000000'
-    #   @user.password_confirmation = '000000'
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'passwordは、6文字以上での入力が必須であること（6文字が入力されていれば、登録が可能なこと）' do
-    #   @user.password = '000000'
-    #   @user.password_confirmation = '000000'
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'passwordは、半角英数字混合での入力が必須であること（半角英数字が混合されていれば、登録が可能なこと）' do
-    #   @user.password = '111aaa'
-    #   @user.password_confirmation = '111aaa'
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'password、確認用を含めて2回入力すること' do
-    #   @user.password = '111aaa'
-    #   @user.password_confirmation = '111aaa'
-    #   expect(@user).to be_valid
-    #  end
-    #  it 'passwordとpassword_confirmation（確認用）は、値の一致が必須であること' do
-    #   @user.password = '111aaa'
-    #   @user.password_confirmation = '111aaa'
-    #   expect(@user).to be_valid
-    #  end
+    end
 
   end 
     context '新規登録できないとき' do
