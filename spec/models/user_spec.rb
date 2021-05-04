@@ -12,8 +12,9 @@ RSpec.describe User, type: :model do
       expect(@user).to be_valid
      end
     end
+  end
 
-  end 
+   
     context '新規登録できないとき' do
      it 'nicknameが空では登録できない' do
        @user.nickname = ''
@@ -58,9 +59,9 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password can't be blank")
      end
      it 'passwordとpassword_confirmation（確認用）は、値の一致が必須しないと登録できない' do
-      @user.password = ''
+      @user.password_confirmation = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include("Password can't be blank")
+      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
      end
      it 'ユーザー本名は、名字と名前がそれぞれ必須でないと登録できない' do
       @user.first_name = ''
@@ -79,4 +80,3 @@ RSpec.describe User, type: :model do
      end
     end
   end
-end
