@@ -72,11 +72,6 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("First name kana can't be blank")
      end
-     it 'ユーザー本名のフリガナは、全角（カタカナ）での入力が必須でないと登録できない' do
-      @user.first_name_kana = ''
-      @user.valid?
-      expect(@user.errors.full_messages).to include("First name kana can't be blank")
-     end
      it '生年月日が必須でないと登録できない' do
       @user.birthday = ''
       @user.valid?
