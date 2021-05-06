@@ -88,11 +88,6 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("Password is invalid")
      end
-     it 'passwordが確認用を含め2回入力しないと登録できない' do
-      @user.password = ''
-      @user.valid?
-      expect(@user.errors.full_messages).to include("Password can't be blank")
-     end
      it 'passwordとpassword_confirmation（確認用）は、値の一致が必須しないと登録できない' do
       @user.password_confirmation = ''
       @user.valid?
