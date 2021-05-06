@@ -14,4 +14,6 @@ class Category < ActiveHash::Base
   ]
 
   validates :category, presence: true
+  include ActiveHash::Associations
+  has_many :items
   end
