@@ -4,6 +4,13 @@ def create
   Item.create(item_params)
 end
 
+def new
+  @item = Item.new
+end
+
+def index
+end
+
 
  private
 
