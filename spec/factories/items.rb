@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 FactoryBot.define do
   factory :item do 
    item_mane             {'スケボー'}
