@@ -6,7 +6,6 @@ class DaysToShip < ActiveHash::Base
     { id: 3, name: '2日〜3日で発送' },
     { id: 4, name: '4日〜7日で発送' },
   ]
-  validates :category, presence: true
   include ActiveHash::Associations
   has_many :items
 end
