@@ -74,6 +74,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :purchase_record
+- belongs_to :order
 
 ## commentsTabel名
 
