@@ -8,7 +8,7 @@ class CreateShippingAddresses < ActiveRecord::Migration[6.0]
       t.string     :address2
       t.string     :building_name
       t.string     :phone_number
-      t.references :order
+      t.references :order,         foreign_key: true
       t.timestamps
     end
   end
