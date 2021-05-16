@@ -11,7 +11,6 @@ RSpec.describe OrderShippingAddress, type: :model do
  describe '商品購入' do
   context '商品が購入できる時' do
     it '全項目が埋まっている時購入できる' do
-      # binding.pry
       expect(@order_shipping_address).to be_valid
     end
     it '建物名が空でも商品が購入できる' do

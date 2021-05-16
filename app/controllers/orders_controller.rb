@@ -1,11 +1,10 @@
 class OrdersController < ApplicationController
   def index
-    @order_shipping_address = OrderShippingAddress.new #フォームオブジェクトのインスタンスを生成し、インスタンス変数に代入する
+    @order_shipping_address = OrderShippingAddress.new
     @item = Item.find(params[:item_id])
   end
 
   def create
-      # binding.pry
     @item = Item.find(params[:item_id])
     @order_shipping_address = OrderShippingAddress.new(order_params)
     if @order_shipping_address.valid?
@@ -22,8 +21,6 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order_shipping_address).permit(:portal_code, :prefecture_id, :address1, :address2, :building_name, :phone_number, :price).merge(user_id: current_user.id, token: params[:token])
   end
-  #requireは引数にしていたorderのkeyだけを取得できる。permitaは許可したいパラメータをフィルタしてくれる。
-  #mergeは追加したいカラム名 :値
 
   def pay_item
     Payjp.api_key = "sk_test_b5b47ec62de76b35daf656bb"

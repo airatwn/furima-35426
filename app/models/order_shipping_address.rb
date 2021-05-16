@@ -13,7 +13,6 @@ class OrderShippingAddress
   end
 
   def save
-    # 各テーブルにデータを保存する処理を書く
     order = Order.create(user_id: user_id, item_id: item_id) 
     ShippingAddress.create(portal_code: portal_code, prefecture_id: prefecture_id, address1: address1, address2: address2, building_name: building_name, phone_number: phone_number, order_id: order.id)
   end
