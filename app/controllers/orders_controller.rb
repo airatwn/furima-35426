@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :show]
   def index
     @order_shipping_address = OrderShippingAddress.new
     @item = Item.find(params[:item_id])
@@ -30,5 +31,12 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
-  end
+
+  # def move_to_index
+  #   if user_signed_in?
+  #     redirect_to root_path
+  #   end
+  # end
+
+end
 
