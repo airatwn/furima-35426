@@ -1,6 +1,6 @@
 class OrderShippingAddress
     include ActiveModel::Model
-    attr_accessor :portal_code, :prefecture_id, :address1, :address2, :building_name, :phone_number, :order, :user_id, :item_id
+    attr_accessor :portal_code, :prefecture_id, :address1, :address2, :building_name, :phone_number, :token, :user_id, :item_id
 
   with_options presence: true do
     validates :portal_code,  format: { with: /\A\d{3}[-]\d{4}\z/ } #ハイフンあり7桁 xxx-xxxx
