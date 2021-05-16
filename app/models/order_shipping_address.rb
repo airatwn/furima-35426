@@ -9,7 +9,7 @@ class OrderShippingAddress
     validates :address2
     validates :phone_number, format: { with: /\A\d[0-9]{,11}\z/ } #ハイフンなし11桁以内の数字のみ
     validates :user_id
-    # validates :token,        format: { with: /[a-zA-Z0-9]+/ } #半角英数字
+    validates :token,        format: { with: /[a-zA-Z0-9]+/ } #半角英数字
   end
 
   def save
