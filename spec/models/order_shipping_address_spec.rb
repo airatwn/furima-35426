@@ -24,7 +24,7 @@ RSpec.describe OrderShippingAddress, type: :model do
     it 'クレジットカード情報が空の時購入できない' do
       @order_shipping_address.token = ''
       @order_shipping_address.valid?
-      expect(@order_shipping_address.errors.full_messages).to include("")
+      expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
     end
     it '郵便番号が空の時購入できない' do
       @order_shipping_address.portal_code = ''
