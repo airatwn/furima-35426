@@ -10,8 +10,7 @@ FactoryBot.define do
     item_text             { 'これはスケボーです。' }
     association :user
     after(:build) do |item|
-      item.image.attach(io: File.open('public/images/test.jpeg'),filename: 'test.jpeg')
+      item.image.attach(io: File.open('public/images/test.jpeg'), filename: 'test.jpeg')
     end
   end
 end
-

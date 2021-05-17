@@ -39,7 +39,7 @@ Things you may want to cover:
 ### Association
 - has_many :items
 - has_many :comments
-- has_many :purchase_records
+- has_many :orders
 
 ## itemsTabel名
 
@@ -53,12 +53,12 @@ Things you may want to cover:
 | prefecture_id       | integer    | null: false                    |
 | days_to_ship_id     | integer    | null: false                    |
 | item_text           | text       | null: false                    |
-| user                | references | null: false, foreign_key: true |
+| user                 | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_one :purchase_record
+- has_one :order
 
 ## shipping_addressesTabel名
 
@@ -73,7 +73,7 @@ Things you may want to cover:
 | order            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :purchase_record
+- belongs_to :order
 
 ## commentsTabel名
 
