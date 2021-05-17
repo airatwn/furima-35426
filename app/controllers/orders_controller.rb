@@ -1,9 +1,9 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :create]
   before_action :set_item, only: [:index, :create]
+  before_action :prevention, only: [:index, :create]
 
   def index
-    redirect_to root_path if current_user.id == @item.user_id || @item.order.present?
     @order_shipping_address = OrderShippingAddress.new
   end
   
@@ -17,15 +17,15 @@ class OrdersController < ApplicationController
       render :index
     end
   end
-
+  
   private
-
+  
   def order_params
     params.require(:order_shipping_address).permit(:portal_code, :prefecture_id, :address1, :address2, :building_name, :phone_number ).merge(
       user_id: current_user.id, token: params[:token], item_id: params[:item_id]
     )
   end
-
+  
   def pay_item
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
@@ -34,9 +34,13 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
-
+  
   def set_item
     @item = Item.find(params[:item_id])
+  end
+  
+  def　prevention
+    redirect_to root_path if current_user.id == @item.user_id || @item.order.present?    
   end
 
 end

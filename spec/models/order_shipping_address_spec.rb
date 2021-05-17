@@ -23,7 +23,7 @@ RSpec.describe OrderShippingAddress, type: :model do
       it 'クレジットカード情報が空の時購入できない' do
         @order_shipping_address.token = ''
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", 'Token is invalid')
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank")
       end
       it '郵便番号が空の時購入できない' do
         @order_shipping_address.portal_code = ''
@@ -33,7 +33,7 @@ RSpec.describe OrderShippingAddress, type: :model do
       it '郵便番号がハイフンが必要であること' do
         @order_shipping_address.portal_code = '6_665_555'
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include('Portal code is invalid')
+        expect(@order_shipping_address.errors.full_messages).to include("Portal code is invalid")
       end
       it '都道府県が空の時購入できない' do
         @order_shipping_address.prefecture_id = ''
@@ -73,17 +73,17 @@ RSpec.describe OrderShippingAddress, type: :model do
       it 'tokenが空では登録できない' do
         @order_shipping_address.token = ''
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank")
       end
       it 'user_idが空では登録できない' do
         @order_shipping_address.token = ''
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank")
       end
       it 'item_idが空では登録できない' do
         @order_shipping_address.token = ''
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank")
       end
     end
   end
