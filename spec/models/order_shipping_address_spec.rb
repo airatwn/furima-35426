@@ -40,6 +40,11 @@ RSpec.describe OrderShippingAddress, type: :model do
         @order_shipping_address.valid?
         expect(@order_shipping_address.errors.full_messages).to include("Prefecture can't be blank")
       end
+      it '都道府県にid1が選択されている時購入できない' do
+        @order_shipping_address.prefecture_id = '1'
+        @order_shipping_address.valid?
+        expect(@order_shipping_address.errors.full_messages).to include("Prefecture must be other than 1")
+      end
       it '市町村が空の時購入できない' do
         @order_shipping_address.address1 = ''
         @order_shipping_address.valid?
@@ -58,12 +63,27 @@ RSpec.describe OrderShippingAddress, type: :model do
       it '電話番号は11桁以内であること' do
         @order_shipping_address.phone_number = '111112222233333'
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include('Phone number is invalid')
+        expect(@order_shipping_address.errors.full_messages).to include("Phone number is invalid")
       end
       it '電話番号は数値のみであること' do
         @order_shipping_address.phone_number = '080-12345678'
         @order_shipping_address.valid?
-        expect(@order_shipping_address.errors.full_messages).to include('Phone number is invalid')
+        expect(@order_shipping_address.errors.full_messages).to include("Phone number is invalid")
+      end
+      it 'tokenが空では登録できない' do
+        @order_shipping_address.token = ''
+        @order_shipping_address.valid?
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
+      end
+      it 'user_idが空では登録できない' do
+        @order_shipping_address.token = ''
+        @order_shipping_address.valid?
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
+      end
+      it 'item_idが空では登録できない' do
+        @order_shipping_address.token = ''
+        @order_shipping_address.valid?
+        expect(@order_shipping_address.errors.full_messages).to include("Token can't be blank", "Token is invalid")
       end
     end
   end
