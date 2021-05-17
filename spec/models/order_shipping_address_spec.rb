@@ -41,7 +41,7 @@ RSpec.describe OrderShippingAddress, type: :model do
         expect(@order_shipping_address.errors.full_messages).to include("Prefecture can't be blank")
       end
       it '都道府県にid1が選択されている時購入できない' do
-        @order_shipping_address.prefecture_id = '1'
+        @order_shipping_address.prefecture_id = 1
         @order_shipping_address.valid?
         expect(@order_shipping_address.errors.full_messages).to include("Prefecture must be other than 1")
       end
