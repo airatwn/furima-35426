@@ -31,7 +31,7 @@ RSpec.describe OrderShippingAddress, type: :model do
         expect(@order_shipping_address.errors.full_messages).to include("Portal code can't be blank", 'Portal code is invalid')
       end
       it '郵便番号がハイフンが必要であること' do
-        @order_shipping_address.portal_code = 6_665_555
+        @order_shipping_address.portal_code = '6_665_555'
         @order_shipping_address.valid?
         expect(@order_shipping_address.errors.full_messages).to include('Portal code is invalid')
       end
