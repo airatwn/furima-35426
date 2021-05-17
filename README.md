@@ -39,7 +39,7 @@ Things you may want to cover:
 ### Association
 - has_many :items
 - has_many :comments
-- has_many :order
+- has_many :orders
 
 ## itemsTabel名
 
